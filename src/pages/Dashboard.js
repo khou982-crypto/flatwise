@@ -10,7 +10,7 @@ export default function Dashboard() {
   const { progress } = useProgress();
   const { completedModules, xp, streak } = progress;
   const totalXP = MODULES.reduce((s, m) => s + m.xp, 0);
-  const xpPct = Math.min(100, Math.round((xp / totalXP) * 100));
+
 
   const getStatus = (mod, idx) => {
     if (completedModules.includes(mod.id)) return 'done';
